@@ -30,7 +30,7 @@ fn complete-directory [a]{
   } else {
     dir = ''
   }
-  for x [(put $dir*[match-hidden][nomatch-ok]$a*[match-hidden][nomatch-ok])] {
+  for x [$dir*[match-hidden][nomatch-ok]$a*[match-hidden][nomatch-ok]] {
     if (-is-dir $x) { edit:complex-candidate &code-suffix=/ &style='blue;bold' $x }
   }
 }
